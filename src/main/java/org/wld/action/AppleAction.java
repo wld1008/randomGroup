@@ -19,8 +19,8 @@ import java.util.concurrent.ConcurrentHashMap;
 @RestController
 public class AppleAction {
 
-    String allUsers = "李晟，周甜甜，侯文武，黄文平，杨林，陈胜难，黎虎，林源，刘静颐，张小华，詹学宝，李磊，王士昌，张炯，喻永权，韩贝贝，吴潮，谢豪杰，汪志刚，吕同生，董杰，成杰，颜鹏庆，冯辉，高烽，倪晓克，王亚飞，项振旺，陈超，邵康，夏翔，张锡奇，庄永立，徐望超，袁金花，张勇勇，钟昌为，吴佳丽，周锦，陈秀秀，叶贤艳黄志钢，邬思明，刘信，王海超，万栋，王寅生，孙晨豪，林华亨，张景春，吴华辉，程伟，管剑军，叶君军，吴文全，江含斌，武利丹，孙阔陈涛，陈竹，徐光梅，闻锦明，金垚，金泽芬，管梦婷，李超 王萍萍，杨娟，艾卫明，邵昕涛，沈远飞，魏云，于成龙，潘冬，孙誉人，周阳关，姜俊，陆仕杰，单晓曦，王坤建，黄星星，孙力，陈炀，林海强，张燕，陈兵，郭逸群，史晓园，方乃平，占越星，吕琴，龙小桃，冯彦婷，李冠男，岳天壮，阎朋，楼兰婷，余日祥，戴永超，周赵金，堵振东，李海星，黄真珍，胡运瑞，陈永兴，王石生";
-    String [] leaders = {"第一组（王泽）","第二组（徐纯）","第三组（叶斌）","第四组（刘盛）","第五组（张汪洋）","第六组(李志勇)","第七组（田野）","第八组（傅腾）"};
+    String allUsers = "小张，小王，小李，小赵，小豆豆";
+    String [] leaders = {"第一组","第二组","第三组","第四组","第五组","第六组","第七组","第八组"};
     Map<String,String> usermap = new ConcurrentHashMap<String, String>();
     Map<String ,Integer> userMap = new HashMap<String ,Integer>();
 
@@ -36,7 +36,7 @@ public class AppleAction {
             response.setContentType("text/html;charset=UTF-8");
 
             if( leaders.length == 0){
-                response.getWriter().print("哎呀，来晚了吧，人员已经分配完毕啦，快去联系海星姐姐给你安排位置呦");
+                response.getWriter().print("哎呀，来晚了吧，人员已经分配完毕啦，快去联系**姐姐给你安排位置呦");
                 return;
             }
 
@@ -48,7 +48,7 @@ public class AppleAction {
             }
 
             if( !allUsers.contains(username)){
-                response.getWriter().print("掐指一算，你肯定没有提前报名吧，快去联系海星姐姐安排分组呦！");
+                response.getWriter().print("掐指一算，你肯定没有提前报名吧，快去联系**姐姐安排分组呦！");
                 return;
             }
 
